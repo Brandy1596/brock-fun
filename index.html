@@ -1,122 +1,216 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BROCK - Brandy's Rock Adventure</title>
+
+<title>BROCK | Brandy's Rock Adventure</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f7fa;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f6fbff;
     color:#333;
+    line-height:1.6;
 }
 
 .hero{
-    background:linear-gradient(135deg,#4ecdc4,#6c5ce7);
+    background:linear-gradient(135deg,#00b894,#6c5ce7);
     color:white;
     text-align:center;
-    padding:40px 20px;
+    padding:60px 20px;
 }
 
 .hero h1{
     font-size:3rem;
-    margin:0;
+    margin-bottom:10px;
 }
 
-.card{
-    background:white;
-    margin:15px;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
+.hero p{
+    font-size:1.2rem;
 }
 
 .button{
     display:inline-block;
-    background:#ff7f50;
+    margin-top:20px;
+    background:#ff7675;
     color:white;
     text-decoration:none;
-    padding:15px 25px;
+    padding:14px 28px;
     border-radius:999px;
     font-weight:bold;
 }
 
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#6c5ce7;
+}
+
 .stats{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
 .stat{
-    background:#eef6ff;
+    background:#eef7ff;
     padding:15px;
-    border-radius:15px;
     text-align:center;
+    border-radius:15px;
+}
+
+.stat h3{
+    font-size:1.8rem;
+    color:#00b894;
+}
+
+.find{
+    background:#fff9e8;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.photo{
+    background:#dfe6e9;
+    border-radius:15px;
+    height:140px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#666;
 }
 
 footer{
     text-align:center;
-    padding:20px;
+    padding:30px;
     color:#666;
+}
+
+@media (min-width:768px){
+
+.stats{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.gallery{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.hero h1{
+    font-size:4rem;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<section class="hero">
     <h1>🪨 BROCK</h1>
     <p>Brandy's Rock Adventure</p>
 
-    <a class="button"
-       href="https://forms.google.com">
-       I FOUNDass="card">
-    <h2>Welcome!</h2>
+    <a class="button" href="#">
+        I FOUND A
 
-    <p>
-        Hi! I'm Brandy.
-    </p>
+<div class="container">
 
-    <p>
-        I paint and hide rocks to spread smiles.
-        If you found one of my rocks, I'd love to know where you discovered it!
-    </p>
-</div>
+    <div class="card">
+        <h2>Welcome!</h2>
 
-<div class="card">
-    <h2>Adventure Stats</h2>
+        <p>
+            Hi! I'm Brandy.
+        </p>
 
-    <div class="stats">
-        <div class="stat">
-            <h3>128</h3>
-            <p>Hidden</p>
-        </div>
+        <br>
 
-        <div class="stat">
-            <h3>51</h3>
-            <p>Found</p>
-        </div>
+        <p>
+            I paint and hide rocks to spread smiles.
+            If you found one of my painted rocks,
+            I'd love to know where it ended up!
+        </p>
+    </div>
 
-        <div class="stat">
-            <h3>22</h3>
-            <p>Cities</p>
-        </div>
+    <div class="card find">
+        <h2>Found a Rock?</h2>
 
-        <div class="stat">
-            <h3>31</h3>
-            <p>Re-hidden</p>
+        <p>
+            Click the button above to log your find,
+            upload a photo, and share where you found it.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Adventure Stats</h2>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3>128</h3>
+                <p>Rocks Hidden</p>
+            </div>
+
+            <div class="stat">
+                <h3>51</h3>
+                <p>Found</p>
+            </div>
+
+            <div class="stat">
+                <h3>22</h3>
+                <p>Cities</p>
+            </div>
+
+            <div class="stat">
+                <h3>31</h3>
+                <p>Re-hidden</p>
+            </div>
+
         </div>
     </div>
-</div>
 
-<div class="card">
-    <h2>Recent Finds</h2>
+    <div class="card">
+        <h2>Recent Finds</h2>
 
-    <p>🪨 Rock #B042 - Found in Indiana</p>
-    <p>🪨 Rock #B017 - Re-hidden by finder</p>
-    <p>🪨 Rock #B088 - Found at a local park</p>
+        <p>🪨 Rock #B042 • Found in Indiana</p>
+        <p>🪨 Rock #B017 • Re-hidden by finder</p>
+        <p>🪨 Rock #B088 • Found at a local park</p>
+    </div>
+
+    <div class="card">
+        <h2>Rock Gallery</h2>
+
+        <div class="gallery">
+            <div class="photo">Photo</div>
+            <div class="photo">Photo</div>
+            <div class="photo">Photo</div>
+            <div class="photo">Photo</div>
+        </div>
+    </div>
+
 </div>
 
 <footer>
